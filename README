@@ -1,0 +1,17 @@
+This (dirty, dirty) script will help manage album art images between your music library and portable device(s). 
+
+It assumes that your album art images are all named something common (my default is folder.jpg) and that your portable device supports album art images of a certain name (my cowon d2 looks for cover.jpg).
+
+Uses ImageMagick and the quick_magick gem to do the actual image creation. Uses SQLite3 and the gem to keep a table of SHA1 hashes of music files and album art images in the music library.
+
+config.ini has the following options:
+localDir = folders in local music library, separate folders using |
+destDir = folders on portable device(s), separate folders using |
+musicTypes = music file types to look for, separate using ,
+imageTypes = local album art image file types to look for, separate using ,
+originalName = file name of local album art images
+coverWidth = image width of cover image to be generated
+coverHeight = image height of cover image to be generated
+coverType = image file type of cover image to be generated
+coverName = file name of cover image to be generated
+
